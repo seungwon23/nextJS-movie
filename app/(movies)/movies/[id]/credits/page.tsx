@@ -1,9 +1,10 @@
-import { API_URL } from "../../../../(home)/page";
 import Credit from "../../../../../components/credit";
 
 interface IParams {
   params: { id: string };
 }
+
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getCredits(id: string) {
   const response = await fetch(`${API_URL}/${id}/credits`);

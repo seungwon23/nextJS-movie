@@ -1,10 +1,11 @@
-import { API_URL } from "../../../../(home)/page";
 import Similar from "../../../../../components/similar";
 import styles from "../../../../../styles/home.module.css"
 
 interface IParams {
   params: { id: string };
 }
+
+const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getSimilar(id: string) {
   const response = await fetch(`${API_URL}/${id}/similar`);
